@@ -30,10 +30,9 @@ public class ControlAcheterProduit {
 		return nomsVendeurs;
 	}
 
-	public int acheterProduit(String nomProduit, int choix, int quantite) {
-		Gaulois vendeur = village.rechercherVendeursProduit(nomProduit)[choix];
+	public int acheterProduit(String nomProduit, String choix, int quantite) {
+		Etal etal = controlTrouverEtalVendeur.trouverEtalVendeur(choix);
 
-		Etal etal = village.rechercherEtal(vendeur);
 		if(etal == null)
 			return 0;
 
