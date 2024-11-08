@@ -40,7 +40,7 @@ public class BoundaryAcheterProduit {
 		System.out.println("Combien de " + nomProduit + " voulez-vous acheter ?");
 		int quantite = scan.nextInt();
 
-		int result = controlAcheterProduit.acheterProduit(nomProduit, vendeurs[choix], quantite);
+		int result = controlAcheterProduit.acheterProduit(vendeurs[choix], quantite);
 		if(result == 0) {
 			System.out.println(
 				  nomAcheteur

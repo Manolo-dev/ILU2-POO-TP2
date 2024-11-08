@@ -9,7 +9,7 @@ public class ControlAfficherMarche {
 		this.village = village;
 	}
 
-	public String[] donnerInfosMarche(String nomAcheteur) {
+	public String[] donnerInfosMarche() {
 		return village.donnerEtatMarche();
 	}
 }
