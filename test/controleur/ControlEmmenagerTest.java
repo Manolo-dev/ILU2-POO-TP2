@@ -49,4 +49,19 @@ public class ControlEmmenagerTest {
         controlEmmenager.ajouterGaulois("Panoramix", 8);
         assertTrue(controlEmmenager.isHabitant("Panoramix"));
     }
+
+    @Test
+    public void testAjouterTropGaulois() {
+        controlEmmenager.ajouterGaulois("Panoramix", 8);
+        controlEmmenager.ajouterGaulois("Assurancetourix", 8);
+        controlEmmenager.ajouterGaulois("Cetautomatix", 8);
+        controlEmmenager.ajouterGaulois("Ordralfabetix", 8);
+        controlEmmenager.ajouterGaulois("Idefix", 8);
+        controlEmmenager.ajouterGaulois("Tragicomix", 8);
+        controlEmmenager.ajouterGaulois("Falbala", 8);
+        controlEmmenager.ajouterGaulois("Agecanonix", 8);
+        assertTrue(controlEmmenager.isHabitant("Agecanonix"));
+        controlEmmenager.ajouterGaulois("Caiusbonus", 8);
+        assertFalse(controlEmmenager.isHabitant("Caiusbonus"));
+    }
 }

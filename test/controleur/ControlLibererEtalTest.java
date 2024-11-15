@@ -16,9 +16,9 @@ public class ControlLibererEtalTest {
     public void initialiserSituation() {
         Village village    = new Village("Le village des irréductibles", 10, 5);
         
-        Chef abraracourcix = new Chef("Abraracourcix", 10, village);
-        Gaulois asterix    = new Gaulois("Asterix", 6);
-        Gaulois obelix     = new Gaulois("Obelix", 12);
+        Chef abraracourcix      = new Chef("Abraracourcix", 10, village);
+        Gaulois asterix         = new Gaulois("Asterix", 6);
+        Gaulois obelix          = new Gaulois("Obelix", 12);
 
         village.ajouterHabitant(asterix);
         village.ajouterHabitant(obelix);
@@ -55,5 +55,17 @@ public class ControlLibererEtalTest {
 
         donneesVente = controlLibererEtal.libererEtal("Panoramix");
         assertEquals("false", donneesVente[0]);
+    }
+
+    @Test
+    public void testLibererEtalMauvaisVendeur() {
+        String[] expected = {"false"};
+        assertArrayEquals(expected, controlLibererEtal.libererEtal("Falbala"));
+    }
+
+    @Test
+    public void testLibererEtalVendeurSansEtal() {
+        String[] expected = {"false"};
+        assertArrayEquals(expected, controlLibererEtal.libererEtal("abraracourcix"));
     }
 }

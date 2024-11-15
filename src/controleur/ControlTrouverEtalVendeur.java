@@ -18,4 +18,8 @@ public class ControlTrouverEtalVendeur {
             return null;
         return village.rechercherEtal(vendeur);
     }
+
+    public Village getVillage() {
+        return village;
+    }
 }
